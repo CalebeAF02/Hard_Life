@@ -12,6 +12,7 @@ Este repositório acompanha meus primeiros passos com gráficos, texturas e lóg
 ---
 
 ## 🚀 Funcionalidades já implementadas
+
 - Criação de janela com Raylib (`InitWindow`).
 - Exibição de texto na tela (`DrawText`).
 - Carregamento e renderização de imagens (`LoadTexture` e `DrawTexture`).
@@ -29,21 +30,23 @@ Este repositório acompanha meus primeiros passos com gráficos, texturas e lóg
     - **CMakeLists.txt** → Configuração do build
     - **README.md** → Este arquivo
 
-
 ---
 
 ## ⚙️ Como compilar
 
 ### Pré-requisitos
+
 - [CMake](https://cmake.org/)
 - [MinGW/TDM-GCC](http://tdm-gcc.tdragon.net/) ou outro compilador compatível
 - [Raylib](https://github.com/raysan5/raylib) compilado (já incluído em `libs/` e `include/`)
 
 ### Passos
+
 1. Clone o repositório:
    ```bash
    git clone https://github.com/CalebeAF02/Hard_Life.git
    cd Hard_Life
+
 #### Compile com CMake:
 
 bash
@@ -52,17 +55,20 @@ cmake --build build
 Execute:
 
 #### bash
+
 ./build/Hard_Life.exe
 🖼️ Assets
 As imagens utilizadas estão na pasta docs/imagens/. Exemplo de carregamento no código:
 
 #### cpp
+
 Texture2D baome = LoadTexture("docs/imagens/baome/baome_verde_de_frente.png");
 DrawTexture(baome, 50, 720 - baome.height, WHITE);
 
 ---
 
 ## 📌 Próximos passos
+
 Criar sistema de cenas/estados (menu, jogo, pausa).
 
 Adicionar movimentação de personagem com teclado.
@@ -72,4 +78,5 @@ Implementar sons e música.
 Estruturar melhor a pasta assets/ para imagens, sons e fontes.
 
 ## 👨‍💻 Autor
+
 Github : [CalebeAF02](https://github.com/CalebeAF02?tab=repositories).

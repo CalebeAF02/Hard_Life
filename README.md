@@ -7,7 +7,7 @@ Este repositório acompanha meus primeiros passos com gráficos, texturas e lóg
 
 ## 🎆 Primeira Janela
 
-![Primeira Janela](C:\Users\caleb\OneDrive\Desktop\repositorios\Hard_Life\docs\linha_do_tempo\primeira_janela.png)
+![Primeira Janela](docs\linha_do_tempo\primeira_janela.png)
 
 ---
 

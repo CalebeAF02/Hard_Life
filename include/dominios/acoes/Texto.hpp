@@ -22,11 +22,7 @@ public:
     {
     }
 
-    void Desenhar()
-    {
-        DrawText(conteudo.c_str(), x, y, 50, cor);
-    }
+    void Desenhar() { DrawText(conteudo.c_str(), x, y, 50, cor); }
 };
 
-
-#endif //HARD_LIFE_FALA_HPP
+#endif // HARD_LIFE_FALA_HPP

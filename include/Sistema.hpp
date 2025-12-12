@@ -5,11 +5,11 @@
 #ifndef UNTITLED_SISTEMA_HPP
 #define UNTITLED_SISTEMA_HPP
 
-#include <raylib.h>
 #include "Cenario.hpp"
 #include "Personagem.hpp"
-#include "Texto.hpp"
 #include "PlanoDeFundo.hpp"
+#include "Texto.hpp"
+#include <raylib.h>
 
 class Sistema
 {
@@ -17,4 +17,4 @@ public:
     void executar();
 };
 
-#endif //UNTITLED_SISTEMA_HPP
+#endif // UNTITLED_SISTEMA_HPP

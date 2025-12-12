@@ -5,41 +5,34 @@
 #ifndef HARD_LIFE_CENARIO_HPP
 #define HARD_LIFE_CENARIO_HPP
 
-#include "PlanoDeFundo.hpp"
 #include "Personagem.hpp"
+#include "PlanoDeFundo.hpp"
 #include "Texto.hpp"
 #include "raylib.h"
 
 class Cenario {
 private:
-  PlanoDeFundo fundo;
+  PlanoDeFundo plano_de_fundo;
   Texto texto;
-  Personagem baome;
+  Personagem personagem;
 
 public:
-  Cenario() : fundo(
-                  "C:/Users/caleb/OneDrive/Desktop/repositorios/Hard_Life/docs/imagens/africa/plano de fundo.png",
-                  0, 0),
-              texto("Primeiros passos com a Raylib", 50, 100, 70, WHITE),
-              baome(
-                  "C:/Users/caleb/OneDrive/Desktop/repositorios/Hard_Life/docs/imagens/baome/baome_verde_de_frente.png",
-                  0, 720, 500) {
-  }
+  // Construtor flexível: recebe caminhos e mensagem
+  Cenario(const char *fundoPath, const char *mensagem,
+          const char *personagemPath, int alturaJanela, int larguraJanela)
+      : plano_de_fundo(fundoPath, 0, 0), texto(mensagem, 50, 100, 70, WHITE),
+        personagem(personagemPath, -335, (alturaJanela - 745) / 2,
+                   larguraJanela / 2) {}
 
-  void Update() {
-    baome.Update();
-  }
+  void update() { personagem.update(); }
 
-  void Desenhar() {
-    fundo.Desenhar();
+  void desenhar() {
+    plano_de_fundo.desenhar();
+    personagem.desenhar();
     texto.Desenhar();
-    baome.Desenhar();
   }
 
-  void Unload() {
-    baome.Unload();
-  }
+  void unload() { personagem.unload(); }
 };
 
-
-#endif //HARD_LIFE_CENARIO_HPP
+#endif // HARD_LIFE_CENARIO_HPP

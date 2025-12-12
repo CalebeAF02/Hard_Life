@@ -11,21 +11,17 @@
 using namespace std;
 
 class PlanoDeFundo {
-
 private:
   Texture2D textura;
   float posx, posy;
 
 public:
-  PlanoDeFundo(char *caminho, float startX, float startY)
-    : posx(startX), posy(startY) {
+  PlanoDeFundo(const char *caminho, float startX, float startY)
+      : posx(startX), posy(startY) {
     textura = LoadTexture(caminho);
   }
 
-  void Desenhar() {
-    DrawTexture(textura, (int)posx, (int)posy, WHITE);
-  }
+  void desenhar() { DrawTexture(textura, (int)posx, (int)posy, WHITE); }
 };
 
-
-#endif //HARD_LIFE_PLANODEFUNDO_HPP
+#endif // HARD_LIFE_PLANODEFUNDO_HPP

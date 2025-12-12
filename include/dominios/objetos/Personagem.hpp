@@ -6,7 +6,6 @@
 #define HARD_LIFE_PERSONAGEM_HPP
 #include "raylib.h"
 
-
 class Personagem {
 private:
   Texture2D textura;
@@ -15,25 +14,22 @@ private:
 
 public:
   Personagem(const char *caminho, float startX, float startY, float destino)
-    : posx(startX), posy(startY), destinoX(destino) {
-    textura = LoadTexture(caminho);
+      : posx(startX), posy(startY), destinoX(destino)
+  {
+      textura = LoadTexture(caminho);
   }
 
-  void Update() {
+  void update() {
     // Move até o centro
-    if (posx != destinoX) {
-      posx += 0.1f; // velocidade
+    if (posx != destinoX)
+    {
+        posx += 1.0f; // velocidade
     }
   }
 
-  void Desenhar() {
-    DrawTexture(textura, (int)posx, (int)posy, WHITE);
-  }
+  void desenhar() { DrawTexture(textura, (int)posx, (int)posy, WHITE); }
 
-  void Unload() {
-    UnloadTexture(textura);
-  }
+  void unload() { UnloadTexture(textura); }
 };
 
-
-#endif //HARD_LIFE_PERSONAGEM_HPP
+#endif // HARD_LIFE_PERSONAGEM_HPP

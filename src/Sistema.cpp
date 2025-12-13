@@ -4,27 +4,32 @@
 
 #include "../include/Sistema.hpp"
 
+#include "../include/utils/utilitarios.hpp"
 #include "Sistema.hpp"
 
 void Sistema::executar() {
-  InitWindow(1200, 720, "Hard Life");
+  const int LARGURA = 1800;
+  const int ALTURA = 900;
+
+  InitWindow(LARGURA, ALTURA, "Hard Life");
+
   SetTargetFPS(60);
 
-  const char *fundoPath = "C:/Users/caleb/OneDrive/Desktop/repositorios/Hard_Life/docs/imagens/africa/Por do Sol.png";
-  const char *mensagem = "Seja Bem Vindo";
-  const char *personagemPath = "C:/Users/caleb/OneDrive/Desktop/repositorios/Hard_"
-                          "Life/docs/imagens/baome/baome_verde_de_frente.png";
+  Personagem personagem_1(utilitarios::local("asset/imagens/teste/africa/Leao_1.png"),0,700);
 
-  Cenario cenario_1(fundoPath, mensagem, personagemPath, 750, 100);
+  PlanoDeFundo plano_de_fundo(utilitarios::local("asset/imagens/plano_de_fundo/1.jpg"), 0,0);
 
   while (!WindowShouldClose()) {
-    cenario_1.update();
+    personagem_1.update();
 
     ClearBackground(RAYWHITE);
     BeginDrawing();
-    cenario_1.desenhar();
+      plano_de_fundo.desenhar();
+      personagem_1.desenhar();
     EndDrawing();
   }
-  cenario_1.unload();
+  plano_de_fundo.unload();
+  personagem_1.unload();
+
   CloseWindow();
 }

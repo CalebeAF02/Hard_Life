@@ -20,11 +20,14 @@ add_executable(Hard_Life
         src/main.cpp
         src/sistema.cpp
 
-        src/dominios/objetos/Cenario.cpp
-        src/dominios/objetos/Personagem.cpp
-        src/dominios/objetos/PlanoDeFundo.cpp
+        src/dominios/objetos/personagem.cpp
+        src/dominios/objetos/planoDeFundo.cpp
 
-        src/dominios/acoes/Texto.cpp
+        src/dominios/acoes/texto.cpp
+        src/utils/Utilitarios.cpp
+        include/utils/utilitarios.hpp
+        src/dominios/acoes/movimento.cpp
+        include/dominios/acoes/movimento.hpp
 )
 
 target_link_libraries(Hard_Life

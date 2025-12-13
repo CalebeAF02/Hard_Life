@@ -5,7 +5,6 @@
 #ifndef UNTITLED_SISTEMA_HPP
 #define UNTITLED_SISTEMA_HPP
 
-#include "Cenario.hpp"
 #include "Personagem.hpp"
 #include "PlanoDeFundo.hpp"
 #include "Texto.hpp"
